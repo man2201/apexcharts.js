@@ -6974,7 +6974,12 @@ function () {
           if (!w.config.chart.stacked) {
             // the shape exceeds the chart height, hence reduce y
             if (this.barOptions.endingShape === 'rounded') {
-              y = y + eY / 2;
+              if((y - z)*(y - z + eY)<0)
+              {
+                 y = z;
+              }else{
+                y = y + eY / 2;
+              }
             }
           }
 
