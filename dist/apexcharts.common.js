@@ -6964,7 +6964,8 @@ function () {
         var _endingShape = null;
         var _endingShapeFrom = '';
         var y = opts.y;
-
+        var z = opts.zeroH;
+        
         if (typeof series[i][j] !== 'undefined' || series[i][j] !== null) {
           var _inverse = series[i][j] < 0;
 
